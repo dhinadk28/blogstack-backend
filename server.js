@@ -19,6 +19,9 @@ app.use(express.json())
 app.use(cors())
 
 app.use("/",IndexRoute)
+app.use("/test", (req, res) => {
+    res.send("Hello world!!");
+  });
 
 app.use(customErrorHandler)
 
